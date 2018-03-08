@@ -21,7 +21,8 @@ module.exports = {
   // Tell webpack to use html plugin
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(paths.SRC, 'index.html')
+      template: path.join(paths.SRC, 'index.html'),
+      favicon: 'src/assets/favicon.ico'
     }),
     new ExtractTextPlugin('style.bundle.css'), // CSS will be extracted to this bundle file
     new CleanWebpackPlugin([paths.DIST]),
